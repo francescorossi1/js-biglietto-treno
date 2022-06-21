@@ -6,6 +6,12 @@ console.log('JS OK');
 
 // Collega un paragrafo per stampare il risultato 
 
+const title = document.getElementById('title');
+
+const distance = document.getElementById('km-display');
+
+const age = document.getElementById('age-display');
+
 const result = document.getElementById('price-display');
 
 // Chiedi all'utente il numero di chilometri
@@ -36,7 +42,12 @@ if (isNaN(userAge) == true || userAge < 1 || userAge > 120) {
 // Se i dati richiesti sono corretti:
 
 if (isValid) {
+
+    title.innerHTML = `<h1>Benvenuto su Boolitalia</h1><h4>Calcolo del prezzo del biglietto del treno</h4>`
     
+    distance.innerHTML = `Vuoi viaggiare per: <strong>${travelDistance}km</strong>.`
+
+    age.innerHTML = `Dichiari di avere: <strong>${userAge} anni</strong>.`
     
     // Crea una variabile che definisca il prezzo intero e una per i possibili sconti
 
